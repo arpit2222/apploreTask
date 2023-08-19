@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.mainBG{
+  background-image: url("../../public/mainBack2.png"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBG1{
+  background-image: url("../../public/mainBack1.png"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.mainBG3{
+  background-image: url("../../public/mainBack3.png"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.animate-scrolling {
+  animation: scroll infinite linear 15s; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-r-scrolling {
+  animation: scrollr infinite linear 20s; 
+}
+
+@keyframes scrollr {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
